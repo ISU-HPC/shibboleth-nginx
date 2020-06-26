@@ -6,5 +6,6 @@ RUN yum -y update \
     && yum -y install nginx certbot\
     && yum -y clean all
 
-CMD ["nginx && run-jetty.sh"]
-
+CMD /usr/sbin/nginx && /usr/local/bin/run-jetty.sh
+#CMD ["/bin/sleep infinity"]
+#CMD ["/usr/sbin/init"]
